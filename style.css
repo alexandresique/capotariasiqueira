@@ -119,9 +119,10 @@ header {
 
 .intro h1 {
     color: rgb(216, 179, 16);
+    text-shadow: 0px 1px 2px grey;
 }
 
-.intro button {
+.intro button{
     padding: 5px;
     background-color: rgb(216, 179, 16);
     color: whitesmoke;
@@ -130,6 +131,11 @@ header {
     border-radius: 5px;
     text-shadow: 0px 2px 1px grey;
     cursor: pointer;
+    font-size: 18px;
+}
+.intro button a{
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 .intro button:hover {
@@ -161,6 +167,7 @@ header {
     flex-direction: row;
     text-align: center;
     padding: 10px;
+    overflow: hidden;
 }
 
 .servicos div {
@@ -177,10 +184,17 @@ header {
 }
 
 .servicos div img {
-    max-width: 200px;
+    max-width: 175px;
     border-radius: 10px;
+    -moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
 }
-
+.servicos div img:hover{
+    -moz-transform: scale(1.1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
+}
 .servicos div p {
     color: rgb(197, 197, 197);
 }
@@ -204,5 +218,56 @@ header {
         border: 2px dashed rgba(128, 128, 128, 0.733);
         margin-top: 20px;
         margin-bottom: 20px;
+    }
+}
+footer{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding: 20px;
+    color: rgb(197, 197, 197);
+    background-color: rgba(27, 13, 1, 0.884);
+}
+footer h4{
+    margin-top: 0px;
+    color: rgb(216, 179, 16);
+}
+footer span{
+    color: rgb(216, 179, 16);
+    font-weight: bold;
+}
+@media (max-width: 858px){
+    footer{
+        display: block;
+        text-align: center;
+        padding: 0px;
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    footer iframe{
+        max-width: 200px;
+        max-height: 150px;
+        border-radius: 10px;
+    }
+    footer h4{
+        padding-top: 20px;
+    }
+    
+    .endereco{
+        margin-bottom: 20px;
+    }
+    .endereco p{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .org{
+        background-color: rgb(27, 13, 1);
+        padding: 10px;
+        font-size: 15px;
+    }
+    .org {
+        margin: 0px;
     }
 }
